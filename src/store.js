@@ -1,13 +1,8 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
-
-// example
-let isSign = createSlice({
-  name: 'isSign',
-  initialState: false,
-});
+import { configureStore } from '@reduxjs/toolkit';
+import background from './store/backgroundSlice.js';
 
 export default configureStore({
   reducer: {
-    isSign: isSign.reducer,
+    background: background.reducer,
   },
 });
