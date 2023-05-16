@@ -83,21 +83,21 @@ npm install -D jest @types/jest @babel/core @babel/preset-env
 ## Code Convention
 ### Types
  - **Primitives**: primitive type은 그 값을 직접 조작한다.
-   + ```string```
-   + ```number```
-   + ```boolean```
-   + ```null```
-   + ```undefined```
+   + `string`
+   + `number`
+   + `boolean`
+   + `null`
+   + `undefined`
 
  - **Complex**: 참조형(Complex)은 참조를 통해 값을 조작한다.
-   + ```object```
-   + ```array```
-   + ```function```  
+   + `object`
+   + `array`
+   + `function`
 
 ### References
- - 변수 선언은 값이 변하는 경우에는 ```let```을 사용하고 변하지 않는 경우에는 ```const```를 사용한다.
- - ```let```과 ```const```는 선언된 블록 안에서만 존재하는 블록 스코프이다.
- - ```var```은 사용하지 않는다.
+ - 변수 선언은 값이 변하는 경우에는 `let`을 사용하고 변하지 않는 경우에는 `const`를 사용한다.
+ - `let`과 `const`는 선언된 블록 안에서만 존재하는 블록 스코프이다.
+ - `var`은 사용하지 않는다.
 
 ### Objects, Arrays
  - 오브젝트, 배열을 작성할 때는, 리터럴 구문을 사용한다.
@@ -105,8 +105,8 @@ npm install -D jest @types/jest @babel/core @babel/preset-env
 const item = {};
 const item = [];
 ```
- - 아이템을 배열에 추가하는 경우, 직접 배열에 항목을 대입하지 말고 ```Array.push()```를 이용한다.
- - 배열을 복사할 때는 배열의 spread 연산자(```...```)를 이용한다.
+ - 아이템을 배열에 추가하는 경우, 직접 배열에 항목을 대입하지 말고 `Array.push()`를 이용한다.
+ - 배열을 복사할 때는 배열의 spread 연산자(`...`)를 이용한다.
 ```javascript
 const itemsCopy = [...items];
 ```
@@ -219,7 +219,7 @@ function f4(a) {
 ```
 
 ### Classes & Constructors
-- ```prototype```을 직접 조작하는 것을 피하고 항상 ```class```를 이용한다.
+- `prototype`을 직접 조작하는 것을 피하고 항상 `class`를 이용한다.
 ```javascript
 // bad
 function Queue(contents = []) {
