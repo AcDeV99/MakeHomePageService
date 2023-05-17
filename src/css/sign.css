@@ -5,7 +5,7 @@
   transform-origin: left top;
   transform: scale(0) translate(-50%, -50%);
   width: 400px;
-  height: 440px;
+  height: 520px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -18,12 +18,24 @@
   transition: transform 0.5s ease, height 0.2s ease;
 }
 
+.error_next_box {
+  color: #162938;
+  font-size: 14px;
+  font-weight: 700;
+  filter: blur(0);
+  transition: filter 1s;
+}
+
+.hide {
+  filter: blur(100px);
+}
+
 .sign-wrapper.active-popup {
   transform: scale(1) translate(-50%, -50%);
 }
 
 .sign-wrapper.active {
-  height: 520px;
+  height: 640px;
 }
 
 .sign-wrapper .form-box {
@@ -79,7 +91,11 @@
   width: 100%;
   height: 50px;
   border-bottom: 2px solid #162938;
-  margin: 30px 0;
+  margin: 70px 0;
+}
+
+.input-box:nth-child(1) {
+  margin-top: 40px;
 }
 
 .input-box label {
@@ -94,9 +110,7 @@
   transition: 0.5s;
 }
 
-/* :valid : input의 형식을 지키면 true 반환하여 실행 */
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
+.input-box input ~ label {
   top: -5px;
 }
 
