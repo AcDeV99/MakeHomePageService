@@ -17,5 +17,3 @@ export default function Background() {
     </>
   );
 }
-// 메뉴 버튼 클릭 시 각 메뉴에 맞는 문자열을 Background 컴포넌트에 전송
-// Background 컴포넌트는 항상 존재

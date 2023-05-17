@@ -7,16 +7,21 @@
 }
 
 body::-webkit-scrollbar {
-  width: 1px; /* 스크롤바의 너비 */
+  /* 스크롤바의 너비 */
+  width: 1px;
 }
 
 body::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #217af4; /* 스크롤바의 색상 */
+  /* 스크롤바의 길이 */
+  height: 30%;
+
+  /* 스크롤바의 색상 */
+  background: #217af4;
 
   border-radius: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+  /*스크롤바 뒷 배경 색상*/
+  background: rgba(33, 122, 244, 0.1);
 }

@@ -1,6 +1,7 @@
 import { IoIosClose, IoIosMail, IoIosLock, IoIosPerson } from 'react-icons/io';
 import '../../css/sign.css';
 import { activateComponent } from '../../func/activateComponent.ts';
+import { validateSign } from '../../func/validateSign';
 export default function Sign() {
   return (
     <div className="sign-wrapper" id="sign-wrapper">
@@ -19,24 +20,54 @@ export default function Sign() {
             <span className="icon">
               <IoIosMail />
             </span>
-            <input type="email" required />
+            <input
+              id="login-email"
+              type="email"
+              required
+              onInput={() =>
+                validateSign('login-email', 'login-error-email', 'email')
+              }
+              minLength={5}
+              maxLength={20}
+            />
             <label>Email</label>
+            <span id="login-error-email" className="error_next_box hide">
+              5~20자의 영문 소문자, 숫자와 특수기호(_),(-),(@)만 사용
+              가능합니다.
+            </span>
           </div>
           <div className="input-box">
             <span className="icon">
               <IoIosLock />
             </span>
-            <input type="password" required />
+            <input
+              id="login-password"
+              type="password"
+              required
+              onInput={() =>
+                validateSign(
+                  'login-password',
+                  'login-error-password',
+                  'password'
+                )
+              }
+              minLength={8}
+              maxLength={16}
+            />
             <label>Password</label>
+            <span id="login-error-password" className="error_next_box hide">
+              8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.
+            </span>
           </div>
+
           <div className="remember-forgot">
             <label>
               <input type="checkbox" />
               Remember me
             </label>
-            <a href="#">Forgot Password?</a>
+            <span>Forgot Password?</span>
           </div>
-          <button type="submit" className="btn">
+          <button id="login-submit" type="submit" className="btn">
             Login
           </button>
           <div className="login-register">
@@ -62,22 +93,67 @@ export default function Sign() {
             <span className="icon">
               <IoIosPerson />
             </span>
-            <input type="text" required />
+            <input
+              id="register-username"
+              type="text"
+              onInput={() =>
+                validateSign(
+                  'register-username',
+                  'register-error-username',
+                  'username'
+                )
+              }
+              required
+              minLength={2}
+              maxLength={16}
+            />
             <label>Username</label>
+            <span id="register-error-username" className="error_next_box hide">
+              2~16자의 영문 소문자, 숫자와 한글만 사용 가능합니다.
+            </span>
           </div>
           <div className="input-box">
             <span className="icon">
               <IoIosMail />
             </span>
-            <input type="email" required />
+            <input
+              id="register-email"
+              type="email"
+              onInput={() =>
+                validateSign('register-email', 'register-error-email', 'email')
+              }
+              required
+              minLength={5}
+              maxLength={20}
+            />
             <label>Email</label>
+            <span id="register-error-email" className="error_next_box hide">
+              5~20자의 영문 소문자, 숫자와 특수기호(_),(-),(@)만 사용
+              가능합니다.
+            </span>
           </div>
           <div className="input-box">
             <span className="icon">
               <IoIosLock />
             </span>
-            <input type="password" required />
+            <input
+              id="register-password"
+              type="password"
+              onInput={() =>
+                validateSign(
+                  'register-password',
+                  'register-error-password',
+                  'password'
+                )
+              }
+              required
+              minLength={8}
+              maxLength={16}
+            />
             <label>Password</label>
+            <span id="register-error-password" className="error_next_box hide">
+              8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.
+            </span>
           </div>
           <div className="remember-forgot">
             <label>
